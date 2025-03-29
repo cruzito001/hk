@@ -1,0 +1,35 @@
+// App General
+"appTitle" = "Hecho en Nuevo León";
+"appSubtitle" = "Descubre negocios locales";
+
+// Login View
+"emailLabel" = "Correo electrónico";
+"emailPlaceholder" = "tu@email.com";
+"passwordLabel" = "Contraseña";
+"passwordPlaceholder" = "Ingresa tu contraseña";
+"loginButton" = "Iniciar sesión";
+"forgotPassword" = "¿Olvidaste tu contraseña?";
+"noAccount" = "¿No tienes cuenta?";
+"register" = "Regístrate";
+
+// Register View
+"registerTitle" = "Crear cuenta";
+"registerSubtitle" = "Únete a nuestra comunidad";
+"fullNameLabel" = "Nombre completo";
+"fullNamePlaceholder" = "Ingresa tu nombre completo";
+"confirmPasswordLabel" = "Confirmar contraseña";
+"confirmPasswordPlaceholder" = "Ingresa tu contraseña nuevamente";
+"registerButton" = "Registrarse";
+"backToLogin" = "¿Ya tienes cuenta? Inicia sesión";
+
+// Validation Messages
+"errorTitle" = "Error";
+"emptyFields" = "Por favor completa todos los campos";
+"emptyName" = "Por favor ingresa tu nombre";
+"invalidEmail" = "Por favor ingresa un correo electrónico válido";
+"invalidPassword" = "La contraseña debe tener al menos 6 caracteres";
+"passwordsDoNotMatch" = "Las contraseñas no coinciden";
+
+// Success Messages
+"registrationSuccess" = "¡Registro exitoso!";
+"loginSuccess" = "¡Bienvenido!"; 

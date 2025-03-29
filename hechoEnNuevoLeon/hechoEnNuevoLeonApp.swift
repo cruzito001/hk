@@ -6,27 +6,22 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct hechoEnNuevoLeonApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @StateObject private var authModel = AuthenticationModel()
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authModel.isAuthenticated {
+                MainTabView()
+                    .environmentObject(authModel)
+                    .environment(\.managedObjectContext, persistenceController.viewContext)
+            } else {
+                LoginView()
+                    .environmentObject(authModel)
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }
